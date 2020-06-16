@@ -267,4 +267,28 @@ body{
 .safety-items {
     -ms-overflow-style: none;
 }
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+body {
+    -ms-overflow-style: none;
+}
+.main-body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+.main-body {
+    -ms-overflow-style: none;
+}
+.homepage::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+.homepage {
+    -ms-overflow-style: none;
+}
 /* Hide scrollbar ends */
