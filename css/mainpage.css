@@ -153,6 +153,11 @@ body{
     color: rgba(0, 0, 0 , 0.6);
     margin: 18px;
     font-size: 20px;
+    word-wrap: none;
+}
+.common-header p{
+    font-size: 14px;
+    color: rgba(0, 0, 0 , 0.8);
 }
 .list-res{
     margin-top: 20px;
@@ -177,6 +182,7 @@ body{
 }
 .res-data{
     width: 70%;
+    margin-left: 7px;
 }
 .res-name{
     letter-spacing: 0.7px;
@@ -258,37 +264,285 @@ body{
     width: 100% !important;
 }
 /* tab panel styling ends */
+/* popular panel styling start */
+.tasty-items{
+    white-space: nowrap;
+    overflow-x: scroll;
+    padding: 0 10px 6px 20px;
+}
+.tasty-img{
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    margin-right: 8px;
+    position: relative;
+}
+.tasty-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 11px;
+}
+.dish-data{
+    position: absolute;
+    bottom: 0;
+    margin: 0 0 35px 20px;
+}
+.dish-name{
+    font-size: 29px;
+    font-weight: 650;
+    color: white;
+    letter-spacing: 1px;
+}
+.dish-rate{
+    font-size: 15px;
+    color: whitesmoke;
+    letter-spacing: 1px;
+    font-style: oblique;
+    font-weight: 600;
+}
+.dish-type{
+    font-size: 16px;
+    color: whitesmoke;
+    font-weight: 600;
+    letter-spacing: 0.9px;
+}
+/* popular panel styling end */
+/* slider styling */
+.tags{
+    margin: 16px 0 10px 20px;
+    color: rgba(0, 0, 0 , 0.6);
+    font-size: 22px;
+    font-weight: 600;
+}
+.tags p{
+    font-size: 14px;
+    color: rgba(0, 0, 0 , 0.8);
+}
+.veg{
+    width: 100%;
+    padding-left: 20px;
+    position: relative;
+    
+}
+.veg-header{
+    color: rgba(0, 0, 0 , 0.4);
+    display: inline-block;
+    margin-top: -10px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+.switch {
+    display: inline-block;
+    height: 26px;
+    position: relative;
+    width: 70px;
+}  
+  
+.switch input {
+    display:none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+  }
+
+.slider:before {
+    background-color: #fff;
+    bottom: 3.4px;
+    content: "";
+    height: 20px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 20px;
+}
+
+input:checked + .slider {
+    background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+    transform: translateX(40px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+/* slider stylling end */
+/* popular meals for one styling */
+.SingleMeals{
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.popular-1{
+    padding: 5px 18px 2px 19px;
+    height: 100%;
+    white-space:nowrap; 
+}
+.img-popular{
+    width: 252px;
+    height: 200px;
+    border-radius: 9px !important;
+}
+.no-border{
+    border: none !important;
+}
+.popular-dish-data{
+    width: 100%;
+    padding: 8px 4px 9px 10px;
+    position: relative;
+}
+.item-name{
+    color: #03071e;
+    font-weight: 600;
+    font-size: 21px;
+    letter-spacing: 1px;
+}
+.item-type{
+    color: rgba(0, 0, 0 , 0.6);
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+.item-rate{
+    padding-right: 10px;
+    padding-top: 10px;
+    position: absolute;
+    top:0;
+    right: 0;
+    color: rgba(0, 0, 0 , 0.9);
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.add-item{
+    display: inline-block;
+    border-radius: 5px;
+    margin-top: 22px;
+    padding: 1px 3px;
+    color: #000;
+    font-size: 15px;
+    border: 2px solid #f72585;
+    letter-spacing: 1.8px;
+    width: 30%;
+}
+.add-item i{
+    color: #f72585;
+}
+.item-num{
+    display: none;
+    transition: ease;
+    transition-duration: 0.2s;
+    transition-delay: 0s;
+    margin-top: 20px;
+    border-radius: 5px;
+    width: 50%;
+    border: 2px solid #f72585;
+}
+.size-add{
+    display: inline-block !important;
+    width: 30%;
+    border-right: 1px solid #f72585;
+}
+.quantity{
+    color: rgba(0, 0, 0 , 0.5);
+    font-weight: 900;
+}
+.add i{
+    
+    color: #02c39a !important;
+}
+.add{
+    border-right: none !important;
+    cursor: pointer;
+}
+.minus i{
+    cursor: pointer;
+    color: #d10000 !important;
+}
+
+/* popular meals for one styling end */
+
+
+
+
+
+
 /* Hide scrollbar */
 .safety-items::-webkit-scrollbar {
-    display: none;
+    display: none !important;
 }
 
 /* Hide scrollbar for IE and Edge */
 .safety-items {
-    -ms-overflow-style: none;
+    -ms-overflow-style: none !important;
 }
 body::-webkit-scrollbar {
-    display: none;
+    display: none !important;
 }
 
 /* Hide scrollbar for IE and Edge */
 body {
-    -ms-overflow-style: none;
+    -ms-overflow-style: none !important;
 }
 .main-body::-webkit-scrollbar {
-    display: none;
+    display: none !important;
 }
 
 /* Hide scrollbar for IE and Edge */
 .main-body {
-    -ms-overflow-style: none;
+    -ms-overflow-style: none !important;
 }
 .homepage::-webkit-scrollbar {
-    display: none;
+    display: none !important;
 }
 
 /* Hide scrollbar for IE and Edge */
 .homepage {
-    -ms-overflow-style: none;
+    -ms-overflow-style: none !important;
+}
+.tasty-items::-webkit-scrollbar {
+    display: none !important;
+}
+
+/* Hide scrollbar for IE and Edge */
+.tasty-items {
+    -ms-overflow-style: none !important;
+}
+.SingleMeals::-webkit-scrollbar {
+    display: none !important;
+}
+
+/* Hide scrollbar for IE and Edge */
+.SingleMeals {
+    -ms-overflow-style: none !important;
 }
 /* Hide scrollbar ends */
+/* animation for sale */
+@keyframes invisible{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+        display: none !important;
+    }
+}
+/* .animate-sale{
+    animation-name: invisible;
+    animation-duration: 0.2s;
+    animation-delay: 0s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+} */
+/* animation for sale ends */
