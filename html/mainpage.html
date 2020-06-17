@@ -175,7 +175,7 @@
                 </div>
             </div>
         </div>
-        <div class="homepage tab-pane fade active show" id="follow-classic" role="tabpanel" aria-labelledby="follow-tab-classic">
+        <div class="homepage tab-pane fade" id="follow-classic" role="tabpanel" aria-labelledby="follow-tab-classic">
             <div class="common-header">
                 Trending Today
             </div>
@@ -322,8 +322,42 @@
                 </div>
             </div>
         </div>
-        <div class="homepage tab-pane fade" id="contact-classic" role="tabpanel" aria-labelledby="contact-tab-classic">
-            This is profile panel
+        <div class="homepage tab-pane fade active show" id="contact-classic" role="tabpanel" aria-labelledby="contact-tab-classic">
+            <div class="profile-div">
+                <img src="/home/captain/FoodWay/images/profile.jpeg">
+                <div class="profile-tab-user text-center">K</div>
+            </div>
+            <div class="user-info text-center">
+                <div class="username">Kuldeep Sahu</div>
+                <div class="user-email">kulz1004@gmail.com</div>
+            </div>
+            <div class="classic-tabs-profile">
+
+                <ul class="nav tabs-cyan-profile d-flex justify-content-between" id="myClassicTab-profile" role="tablist">
+                    <li class="nav-item panel-profile">
+                        <a class="nav-link waves-light-profile active show first active-profile-tab" id="profile-tab-classic-profile" data-toggle="tab" href="#profile-classic-profile"
+                        role="tab" aria-controls="profile-classic-profile" aria-selected="true"><span class="panel-name">Dining</span></a>
+                    </li>
+                    <li class="nav-item panel-profile">
+                        <a class="nav-link waves-light-profile" id="follow-tab-classic-profile" data-toggle="tab" href="#follow-classic-profile" role="tab"
+                        aria-controls="follow-classic-profile" aria-selected="false">Bookmarks</a>
+                    </li>
+                    <li class="nav-item panel-profile">
+                        <a class="nav-link waves-light-profile third" id="contact-tab-classic-profile" data-toggle="tab" href="#contact-classic-profile" role="tab"
+                        aria-controls="contact-classic-profile" aria-selected="false">Reviews</a>
+                    </li>
+                </ul>
+                <div class="tab-content rounded-bottom" id="myClassicTabContentprofile">
+                    <div class="tab-pane-profile fade active show" id="profile-classic-profile" role="tabpanel" aria-labelledby="profile-tab-classic">
+                        
+                    </div>
+                    <div class="tab-pane-profile fade" id="follow-classic-profile" role="tabpanel" aria-labelledby="follow-tab-classic">
+                    </div>
+                    <div class="tab-pane-profile fade" id="contact-classic-profile" role="tabpanel" aria-labelledby="contact-tab-classic">
+                    </div>
+                </div>
+      
+            </div>
         </div>
         <div class="homepage tab-pane fade" id="awesome-classic" role="tabpanel" aria-labelledby="awesome-tab-classic">
             This is about us.
@@ -341,14 +375,14 @@
                     </div>  
                 </li>
                 <li class="nav-item panel">
-                    <div class="text-center nav-link waves-light active show" id="follow-tab-classic" data-toggle="tab" href="#follow-classic" role="tab"
+                    <div class="text-center nav-link waves-light" id="follow-tab-classic" data-toggle="tab" href="#follow-classic" role="tab"
                     aria-controls="follow-classic" aria-selected="false">
                         <i class="fa fa-fire" aria-hidden="true"></i>
                         <a class="nav-link waves-light">Trending</a>
                     </div>
                 </li>
                 <li class="nav-item panel">
-                    <div class="text-center nav-link waves-light" id="contact-tab-classic" data-toggle="tab" href="#contact-classic" role="tab"
+                    <div class="text-center nav-link waves-light active show" id="contact-tab-classic" data-toggle="tab" href="#contact-classic" role="tab"
                     aria-controls="contact-classic" aria-selected="false">
                         <i class="fa fa-user" aria-hidden="true"></i>
                         <a class="nav-link waves-light">Profile</a>
@@ -365,12 +399,37 @@
   
         </div>
     </div>
+    <div class="sidebar">
+        <div class="sidebar-panel">
+            <div class="userinformation">
+                <div class="user-name">Kuldeep Sahu</div>
+                <div class="email-sidebar">kulz1004@gmail.com</div>
+            </div>
+            <div class="utilities">
+                <div class="options">Notifications</div>
+                <div class="options">Payment options</div>
+                <div class="options">Reviews</div>
+                <div class="options">Contribute</div>
+                <div class="options">Your Orders</div>
+            </div>
+        </div>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script>
+        $('.user').click(function(){
+            $('.sidebar').css({"width" : '57%'});
+        })
+        document.onclick = function(event){
+            if (event===undefined) event= window.event;
+            var target= 'target' in event? event.target : event.srcElement;
+            if(target.className != 'sidebar' && target.className != 'user text-center'){
+                $('.sidebar').css({"width" : '0%'});
+            }
+        }
         var elem;
         $('.add-item').click(function(){
                 $(this).toggle();
